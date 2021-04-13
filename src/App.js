@@ -7,7 +7,7 @@ import Video from "./Video";
 function App() {
   return (
 
-      <BrowserRouter basename="/viemo-react">
+      <BrowserRouter  basename={process.env.PUBLIC_URL}>
           <Switch>
               <Route path="/:id" exact component={Video} />
               <Redirect path="*" to="/" />
