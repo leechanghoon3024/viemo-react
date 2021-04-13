@@ -10,6 +10,9 @@ const Video = ({match, location}) => {
     const [ hide, setHide] = useState(true)
     useEffect(()=>{
         window.addEventListener('resize', isHiding)
+        document.addEventListener('webkitfullscreenchange', onFullScreen)
+        document.addEventListener("fullscreenchange", onFullScreen);
+        document.addEventListener("mozfullscreenchange", onFullScreen);
     },[])
 
     useEffect(()=>{
@@ -26,7 +29,14 @@ const Video = ({match, location}) => {
         console.log("eeee", e)
 
     }
-    console.log(id)
+
+
+    const onFullScreen = (e) => {
+        const isFullscreenNow = document.webkitFullscreenElement !== null
+        console.log('full', isFullscreenNow)
+        window.postMessage(isFullscreenNow ? 'true' : 'false')
+    }
+
     return (
         <div scroll="no" style={ {  overflow: 'hidden', } }>
             {id !== -1 ? (
@@ -43,6 +53,8 @@ const Video = ({match, location}) => {
                     showTitle={false}
                     controls={hide}
                     color={'FF4C22'}
+
+                    webkitallowfullscreen={true}
                     showPortrait={false}
                 />
                 // <div className='player-wrapper'>
