@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Vimeo from "@u-wave/react-vimeo";
+import {useCallback, useEffect, useState} from "react";
+import {BrowserRouter, Switch, Route, Redirect, HashRouter} from "react-router-dom";
+import Video from "./Video";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <BrowserRouter basename="/viemo-react">
+          <Switch>
+              <Route path="/:id" exact component={Video} />
+              <Redirect path="*" to="/" />
+          </Switch>
+      </BrowserRouter>
+
   );
 }
 
