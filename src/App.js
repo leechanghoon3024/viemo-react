@@ -7,12 +7,12 @@ import Video from "./Video";
 function App() {
   return (
 
-      <BrowserRouter  basename={process.env.PUBLIC_URL}>
+      <HashRouter>
           <Switch>
               <Route path="/:id" exact component={Video} />
               <Redirect path="*" to="/" />
           </Switch>
-      </BrowserRouter>
+      </HashRouter>
 
   );
 }
