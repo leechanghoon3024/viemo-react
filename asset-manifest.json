@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/viemo-react/static/css/main.c526e77d.chunk.css",
-    "main.js": "/viemo-react/static/js/main.87f73144.chunk.js",
-    "main.js.map": "/viemo-react/static/js/main.87f73144.chunk.js.map",
+    "main.js": "/viemo-react/static/js/main.356fc544.chunk.js",
+    "main.js.map": "/viemo-react/static/js/main.356fc544.chunk.js.map",
     "runtime-main.js": "/viemo-react/static/js/runtime-main.0d620879.js",
     "runtime-main.js.map": "/viemo-react/static/js/runtime-main.0d620879.js.map",
     "static/js/2.b71cc8f2.chunk.js": "/viemo-react/static/js/2.b71cc8f2.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0d620879.js",
     "static/js/2.b71cc8f2.chunk.js",
     "static/css/main.c526e77d.chunk.css",
-    "static/js/main.87f73144.chunk.js"
+    "static/js/main.356fc544.chunk.js"
   ]
 }
